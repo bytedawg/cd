@@ -1,0 +1,148 @@
+/* Import the Museo Sans font */
+@import url("https://fonts.googleapis.com/css2?family=Museo+Sans:wght@100&display=swap");
+
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
+
+:root {
+  --primary_background-color: #0a7982;
+  --primary_color: #0a7982;
+  --primary_border: 1px solid var(--primary-color, #0a7982);
+
+  --secondary_background-color: #555861;
+  --secondary_color: #555861;
+  --secondary_padding: 13px 22px;
+  --secondary_margin: 10px;
+  --secondary_border: 1px solid var(--primary-color, #555861);
+
+  --btn_border-radius: 2px;
+  --btn_padding: 13px 22px;
+  --btn_margin: 10px;
+  --btn_border: 1px solid var(--primary-color, #0a7982);
+  --btn_border-active: 3px solid #fbbc05;
+}
+
+.Design-System-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #0a7982;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.gap-spacer {
+  margin-bottom: 20px;
+}
+
+.primary-btn,
+.primary-btn-right-arrow,
+.secondary-btn {
+  display: inline-flex;
+  padding: var(--btn_padding);
+  justify-content: center;
+  align-items: center;
+  margin: var(--btn_margin);
+  color: #fff;
+  cursor: pointer;
+}
+
+.primary-btn,
+.primary-btn-right-arrow {
+  border: var(--btn_border);
+  background: var(--primary_background-color);
+}
+
+.primary-btn-right-arrow::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f061";
+  margin-left: 5px;
+}
+
+.secondary-btn {
+  background: var(--secondary_background-color);
+}
+
+.primary-btn:hover,
+.primary-btn-right-arrow:hover,
+.secondary-btn:hover {
+  color: var(--primary_color);
+  background: #fff;
+}
+
+.primary-btn:active,
+.primary-btn-right-arrow:active,
+.secondary-btn:active {
+  color: #fff;
+  background: var(--primary_background-color);
+  border: var(--btn_border-active);
+}
+
+.primary-btn:focus,
+.primary-btn-right-arrow:focus,
+.secondary-btn:focus {
+  color: #fff;
+  background: var(--primary_background-color);
+  border: var(--btn_border-active);
+}
+
+.group-btn {
+  display: flex;
+  width: 200px;
+  align-items: baseline;
+}
+
+.submit-btn {
+  padding: var(--btn_padding);
+  justify-content: center;
+  align-items: center;
+  margin: var(--btn_margin);
+  color: #fff;
+  background: var(--primary_background-color);
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.submit-btn:hover {
+  color: var(--primary_color);
+  background: #fff;
+  border: var(--btn_border);
+}
+
+.submit-btn:active {
+  color: #fff;
+  background: var(--primary_background-color);
+  border: var(--btn_border-active);
+}
+
+.cancel-btn {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0072da;
+}
+
+.cancel-btn:hover {
+  font-weight: bold;
+}
+
+.cancel-btn:active {
+  color: #0a7982;
+  font-weight: bold;
+}
+
+.secondary-btn:hover {
+  color: var(--secondary_color);
+  background: #fff;
+  border: var(--primary_border);
+}
+
+.secondary-btn:active {
+  color: #fff;
+  background: var(--secondary_background-color);
+  border: var(--btn_border-active);
+}
+
+.secondary-btn:focus {
+  color: #fff;
+  background: var(--secondary_background-color);
+  border: var(--btn_border-active);
+}

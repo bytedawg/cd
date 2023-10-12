@@ -1,0 +1,498 @@
+/* Import the Museo Sans font */
+@import url('https://fonts.googleapis.com/css2?family=Museo+Sans:wght@100&display=swap');
+
+html {
+  font-size: 16px;
+  font-family: museo-sans, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+
+:root {
+  --content-gap: 50px;
+
+  /* ------ PRIMARY BUTTONS VARIABLES ------ */
+  --primary_btn-bg: #0A7982;
+  --primary_btn-color: #fff;
+  --primary_btn-font-hover-color: #555861;
+  --primary_btn-disabled-bg: #ccc;
+  --primary_btn-border: 1px solid #555861;
+  --primary_btn-width: 6.4375rem;
+  --primary_btn-height: 2.8125rem; 
+  --primary_btn-margin: 0.625rem;
+  --primary_btn_title-width: auto;
+  --primary_btn_title-height: auto;
+  --primary_btn-border-radius: 0.125rem;
+  --primary_btn_hover-border: 0.0625rem solid #555861;
+  --primary_btn-hover-bg-color: #fff;
+  --primary_btn-right-arrow-width: 9.5rem;
+
+
+
+
+  /* ------ PRIMARY BUTTONS VARIABLES END ------ */
+
+
+
+
+  /* ------ SECONDARY BUTTONS VARIABLES ------ */
+  --secondary_btn-bg: #555861;
+  --secondary_btn-color: #fff;
+  --secondary_btn-font-hover-color: #555861;
+  --secondary_btn-disabled-bg: #ccc;
+  --secondary_btn-border: 1px solid #555861;
+  --secondary_btn-width: 103px;
+  --secondary_btn-height: 45px; 
+  --secondary-btn-margin: 10px;
+  --secondary_btn_title-width: auto;
+  --secondary_btn_title-height: auto;
+  --secondary_btn-border-radius: 2px;
+  --secondary_btn_hover-border: 1px solid #555861;
+  --secondary_btn-hover-bg-color: #fff;
+  --secondary_btn-right-arrow-width: 9.5rem;
+
+
+  /* ------ WARNING BUTTONS VARIABLES ------ */
+  --warning_btn-bg: #F04E6D;
+  --warning_btn-color: #fff;
+  --warning_btn-font-hover-color: #F04E6D;
+  --warning_btn-disabled-bg: #ccc;
+  --warning_btn-width: 10.0625rem;
+  --warning_btn-height: 45px; 
+  --warning_btn-margin: 10px;
+  --warning_btn_title-width: auto;
+  --warning_btn_title-height: auto;
+  --warning_btn-border-radius: 2px;
+  --warning_btn_hover-border: 2px solid #F04E6D;
+
+  --btn_default-height: 2.8125rem;
+  --btn_focus-border: 0.125rem solid #FBBC05;
+  --btn_icon-color: #fff;
+  --btn_disabled-color: #fff;
+  --btn_font-size: 1rem;
+  --btn_background-color: $fff;
+  --btn_margin: 0.625rem;
+  --btn_font-color: #fff;
+  --btn_border-radius: 0.125rem;
+
+  --btn_cancel-bg: none;
+  --btn_cancel-color: #0072DA;
+  --btn_cancel-text-decoration: underline;
+
+}
+
+
+/* utility classes */
+
+
+.container {
+  flex-wrap: wrap;
+  display: flex;
+  align-self: center;
+  width: 45em;
+  margin: auto;
+  justify-content: start;
+}
+
+.design-system-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #0A7982;
+  margin: 50px;
+  text-align: center;
+}
+
+.default-button-title {
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  height: 50px;
+
+}
+.content-gap {
+  margin: var(--content-gap) 0;
+  width: 100%;
+}
+
+
+/* utility classes end */
+
+
+
+/* ------ DEFAULT BUTTONS ------ */
+
+.primary_btn,
+.primary_disabled_btn,
+.primary_focus_btn,
+.primary_right-arrow_btn,
+.primary_hover_btn {
+  width: 103px;
+  height: 45px;
+  border: 1px solid;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: var(--btn_font-size);
+  margin: var(--btn-margin);
+}
+
+.primary_btn {
+  background: #0A7982;
+}
+
+.primary_btn:hover,
+.primary_hover_btn {
+  color: #0A7982;
+  border: 1px solid #0A7982;
+  background-color: #fff;
+}
+
+.primary_btn:focus {
+  border: var(--btn_focus-border);
+  outline: none;
+}
+
+.primary_btn_title {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 60px;
+  width: 135px;
+  height: 35px;
+  margin: 5px;
+  font-size: 12px;
+}
+
+.primary_right-arrow_btn,
+.primary_disabled_btn,
+.primary_focus_btn {
+  background: #0A7982;
+}
+
+.primary_right-arrow_btn{
+  width:131px;
+}
+
+
+
+
+/* PRIMARY BTN UTILITY */
+.primary_focus_btn,
+.primary_hover_btn {
+  width: 103px;
+  height: 45px;
+  border: 1px solid;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: var(--btn_font-size);
+  margin: var(--btn-margin);
+}
+
+.primary_hover_btn {
+  color: #0A7982;
+  border: 1px solid #0A7982;
+  background-color: #fff;
+}
+
+
+.primary_disabled_btn {
+  opacity: 0.5;
+}
+
+.primary_focus_btn {
+  border: var(--btn_focus-border);
+}
+
+/* PRIMARY BTN UTILITY END */
+
+
+
+
+/* ------ SECONDARY BUTTONS ------ */
+.secondary_btn {
+  width: var(--secondary_btn-width);
+  height: var(--btn_default-height);
+  border: var(--secondary_btn_hover-border);
+  background: var(--secondary_btn-bg);
+  color: var(--secondary_btn-color);
+  font-size: var(--btn_font-size);
+  margin: var(--btn-margin);
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.secondary_btn:hover {
+  color: var(--secondary_btn-font-hover-color);
+  border: var(--secondary_btn-border);
+  background-color: var(--secondary_btn-hover-bg-color);
+}
+.secondary_btn:focus {
+  border: var(--btn_focus-border);
+}
+
+.secondary_right-arrow_btn{
+  width: var(--secondary_btn-right-arrow-width);
+  color: var(--btn_font-color);
+}
+
+/* SECONDARY UTILITY */
+
+.secondary_focus_btn {
+  border: var(--btn_focus-border);
+  color: var(--btn_font-color);
+  border-radius: var(--btn_border-radius);
+}
+
+
+.secondary_disabled_btn {
+  height: var(--secondary_btn-height);
+  opacity: 0.5;
+  color: var(--btn_font-color);
+}
+
+
+.secondary_right-arrow_btn,
+.secondary_disabled_btn,
+.secondary_focus_btn {
+  background: #555861;
+}
+
+.secondary_btn_title {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 60px;
+  width: 135px;
+  height: 35px;
+  margin: 5px;
+  font-size: 12px;
+}
+
+.secondary_hover_btn {
+  color: var(--secondary_btn-font-hover-color);
+  border: var(--secondary_btn-border);
+  background-color: #fff;
+}
+
+.secondary_disabled_btn,
+.secondary_focus_btn,
+.secondary_right-arrow_btn,
+.secondary_hover_btn {
+  height: var(--secondary_btn-height);
+  font-size: var(--btn_font-size);
+  margin: var(--btn-margin);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* SECONDARY UTILITY END */
+
+
+/* WARNING UTILITY */
+.warning_btn,
+.warning_disabled_btn,
+.warning_hover_btn,
+.warning_focus_btn,
+.warning_right-arrow_btn {
+  display: flex;
+  place-items: center;
+  font-weight: bold;
+  font-size: var(--btn_font-size);
+  text-align: center;
+  justify-content: center;
+  width: var(--warning_btn-width);
+  height: var(--warning_btn-height);
+  margin: var(--warning_btn-margin);
+}
+
+
+.warning_btn_title {
+  width: var(--warning_btn_title-width);
+  height: var(--warning_btn_title-height);
+  text-align: center;
+  font-weight: bold;
+  margin: 1.25rem;
+  font-size: 0.75rem;
+}
+
+.warning_focus_btn {
+  color: #fff;
+  background-color: var(--warning_btn-bg);
+  border: var(--btn_focus-border);
+  border-radius: var(--btn_border-radius);
+}
+
+.warning_hover_btn {
+  border: var(--warning_btn_hover-border);
+  color: var(--warning_btn-font-hover-color);
+}
+
+/* WARNING UTILITY END */
+
+
+
+/* ------ WARNING BUTTONS ------ */
+
+.warning_btn {
+  background-color: var(--warning_btn-bg);
+  color: var(--warning_btn-color);
+  font-size: var(--btn_font-size);
+}
+
+.warning_disabled_btn {
+  background-color: var(--warning_btn-bg);
+  color: var(--warning_btn-color);
+  opacity: 0.6;
+}
+
+.warning_right-arrow_btn {
+  background-color: var(--warning_btn-bg);
+  color: var(--warning_btn-color);
+  font-size: var(--btn_font-size);
+  height: var(--warning_btn-height);
+}
+
+/* ------ WARNING BUTTONS END------ */
+
+
+/* ------ Groupings Buttons ------ */
+.submit_btn {
+  background: var(--primary_btn-bg);
+  width: var(--primary_btn-width);
+  height: var(--primary_btn-height);
+  color: var(--primary_btn-color);
+  font-size: var(--btn_font-size);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancel_btn{
+  color: var(--btn_cancel-color);
+  background-color: var(--btn_cancel-bg);
+  text-decoration: var(--btn_cancel-text-decoration);
+  display:flex;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+  align-items:center;
+  cursor: pointer;
+}
+
+
+.grouping-btn_title {
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+  width: 245px;
+  height: 67px;
+  margin: 5px;
+  font-size: 12px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+
+/* ------ Groupings Buttons END------ */
+
+
+
+/* Style the arrow icon */
+.primary_right-arrow_btn i {
+  margin-left: 5px;
+}
+
+.arrow {
+  margin: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.arrow::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  top: 9px;
+  right: -12px;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 2px 2px 0 0;
+  position: absolute;
+  transform-origin: 50% 50%;
+}
+
+.arrow.right::before {
+  transform: rotate(45deg);
+  margin: -15px 0 0 -20px;
+}
+
+.arrow::after {
+  content: "";
+  display: block;
+  top: 41%;
+  left: 29%;
+  border-style: solid;
+  border-color: #fff;
+  position: absolute;
+  transform-origin: 50% 50%;
+}
+
+.arrow.right::after {
+  width: 17px;
+  height: 0;
+  border-width: 2px 0 0 0;
+  transform: translate(-3px, -1px);
+}
+
+/* arrow icon end */
+
+
+
+/* Radio Buttons  */
+
+.form-check-input {
+  --bs-form-check-bg: var(--bs-body-bg);
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: .25em;
+  vertical-align: top;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--bs-form-check-bg);
+  background-image: var(--bs-form-check-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  -webkit-print-color-adjust: exact;
+}
+
+label.form-check-label {
+  font-size: 16px;
+  font-weight: normal;
+  padding-left: 10px;
+  text-align: start;
+}
+
+
+/* Radio Buttons End */

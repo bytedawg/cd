@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keyword Search</title>
+    <script>
+        async function searchKeyword() {
+            // Get the URL and keyword from the input fields.
+            const url = document.getElementById('url').value;
+            const keyword = document.getElementById('keyword').value;
+
+            // Make the API request.
+            try {
+                const response = await fetch(url);
+                const text = await response.text();
+
+                // Search for the keyword in the text.
+                const keywordRegex = new RegExp(keyword, 'gi');
+                const matches = text.match(keywordRegex);
+
+                // Output the search results.
+                const resultsDiv = document.getElementById('results');
+                if (matches && matches.length > 0) {
+                    resultsDiv.textContent = `Found ${matches.length} occurrences of "${keyword}".`;
+                } else {
+                    resultsDiv.textContent = `No occurrences of "${keyword}" found.`;
+                }
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="url" placeholder="Enter a URL">
+    <input type="text" id="keyword" placeholder="Enter a keyword">
+    <button onclick="searchKeyword()">Search</button>
+    <div id="results"></div>
+</body>
+</html>
